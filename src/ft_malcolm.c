@@ -12,5 +12,7 @@ int main(int argc, char **argv)
         return (1);
     ft_printf("PARSE OK !\n");
     find_interface(&malcolm_ctx);
+    init_socket(&malcolm_ctx);
+    listen_for_request(&malcolm_ctx);
     return (0);
 }
