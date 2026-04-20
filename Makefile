@@ -4,7 +4,7 @@ OBJ_DIR   = obj
 INC_DIR   = includes
 LIB_DIR   = libs
 
-# Sources via wildcard (récursif)
+# Sources via wildcard
 SRCS      = $(shell find $(SRC_DIR) -name "*.c")
 OBJS      = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRCS))
 
