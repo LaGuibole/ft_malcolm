@@ -58,5 +58,6 @@ int	parse_args(t_malcolm *malcolm, char **argv);
 int find_interface(t_malcolm *malcolm_ctx);
 int init_socket(t_malcolm *malcolm_ctx);
 int listen_for_request(t_malcolm *malcolm_ctx);
+int send_reply(t_malcolm *malcolm_ctx, t_frame *request);
 
 #endif

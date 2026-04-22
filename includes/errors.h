@@ -7,4 +7,5 @@
 #define SOCKET_ERR_MSG  "ft_malcolm : socket: %s\n"
 #define NAME_TO_IDX_MSG "ft_malcolm : if_nametoindex: %s\n"
 #define RECV_ERR_MSG "ft_malcolm : recvfrom : %s\n"
+#define SENDTO_ERR_MSG "ft_malcolm : sendto : %s\n"
 #endif

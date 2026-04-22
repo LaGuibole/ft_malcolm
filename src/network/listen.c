@@ -53,7 +53,7 @@ int listen_for_request(t_malcolm *malcolm_ctx)
 				frame.arp.sender_hardware_addr[0], frame.arp.sender_hardware_addr[1], frame.arp.sender_hardware_addr[2], 
 				frame.arp.sender_hardware_addr[3], frame.arp.sender_hardware_addr[4], frame.arp.sender_hardware_addr[5]);
 			ft_printf("IP address of request : %s\n", malcolm_ctx->dest_ip);
-			return (1);
+			return (send_reply(malcolm_ctx, &frame));
 		}
 	}
 }
