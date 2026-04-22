@@ -49,7 +49,7 @@ int listen_for_request(t_malcolm *malcolm_ctx)
 		if (is_valid_request(malcolm_ctx, &frame.arp))
 		{
 			ft_printf("An ARP request has been broadcasted.\n");
-			ft_printf("mac address of request : %02x:%02x:%02x:%02x:%02x:%02x:\n",
+			printf("mac address of request : %02x:%02x:%02x:%02x:%02x:%02x:\n",
 				frame.arp.sender_hardware_addr[0], frame.arp.sender_hardware_addr[1], frame.arp.sender_hardware_addr[2], 
 				frame.arp.sender_hardware_addr[3], frame.arp.sender_hardware_addr[4], frame.arp.sender_hardware_addr[5]);
 			ft_printf("IP address of request : %s\n", malcolm_ctx->dest_ip);
