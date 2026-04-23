@@ -13,11 +13,11 @@ void print_parse(void)
 {
     ft_printf(BOLD_MAGENTA "\nNow parsing IPs and MAC adresses" RESET);
     ft_printf(BOLD_MAGENTA " .");
-    // sleep(1);
+    sleep(1);
     ft_printf(BOLD_MAGENTA " .");
-    // sleep(1);
+    sleep(1);
     ft_printf(BOLD_MAGENTA " .\n" RESET);
-    // sleep(1);
+    sleep(1);
 }
 
 void print_sum(t_malcolm *malcolm_ctx)
