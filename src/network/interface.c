@@ -37,7 +37,7 @@ int find_interface(t_malcolm *malcolm_ctx)
                 && ip_is_in_subnet(ifa, malcolm_ctx->dest_ip))
         {
             ft_strlcpy(malcolm_ctx->iface, ifa->ifa_name, IF_NAMESIZE);
-            ft_printf("Found available interface : %s\n", malcolm_ctx->iface);
+            // ft_printf("Found available interface : %s\n", malcolm_ctx->iface);
             freeifaddrs(ifas);
             return (1);
         }
