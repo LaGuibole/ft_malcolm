@@ -12,6 +12,7 @@
 #include <linux/if_packet.h> // struct sockaddr_11, EHT_P_ARP
 #include <net/ethernet.h>
 #include <errno.h>
+#include <signal.h>
 
 extern volatile sig_atomic_t g_signal;
 
