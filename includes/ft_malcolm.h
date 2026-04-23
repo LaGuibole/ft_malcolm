@@ -13,6 +13,8 @@
 #include <net/ethernet.h>
 #include <errno.h>
 
+extern volatile sig_atomic_t g_signal;
+
 /*
 	Structure for ft_malcom : 
 		- src_ip / dest_ip = Arg string "10.12.255.255", will be converted uint32_t for comparison later

@@ -32,13 +32,16 @@ int listen_for_request(t_malcolm *malcolm_ctx)
 	ssize_t len;
 
 	// ft_printf("Waiting for ARP request...\n");
-	while (1)
+	while (!g_signal)
 	{
 		ft_memset(&frame, 0, sizeof(t_frame));
 		len = recvfrom(malcolm_ctx->sockfd, &frame, sizeof(t_frame), 0, NULL, NULL);
 		if (len == -1)
+		{
+			if (g_signal)
+				break ;
 			return (ft_printf(RECV_ERR_MSG, strerror(errno)), 0);
-		
+		}
 		// printf("sizeof t_eth_header: %zu\n", sizeof(t_eth_header));								// debug
 		// printf("sizeof t_arp_packet: %zu\n", sizeof(t_arp_packet));								// debug
 		// printf("sizeof t_frame: %zu\n", sizeof(t_frame));										// debug
@@ -56,4 +59,6 @@ int listen_for_request(t_malcolm *malcolm_ctx)
 			return (send_reply(malcolm_ctx, &frame));
 		}
 	}
+	ft_printf("\nExiting program...\n");
+	return (1);
 }

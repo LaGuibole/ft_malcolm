@@ -47,6 +47,5 @@ int send_reply(t_malcolm *malcolm_ctx, t_frame *request)
     if (sendto(malcolm_ctx->sockfd, &reply, sizeof(t_frame), 0, (struct sockaddr *)&sll, sizeof(sll)) == -1)
         return (ft_printf(SENDTO_ERR_MSG), strerror(errno), 0);
     ft_printf("Sent ! Check ARP Table on the target, i hope i didn't mess this up\n"); //debug
-    ft_printf("Exiting programm ...");
     return (1);
 }
